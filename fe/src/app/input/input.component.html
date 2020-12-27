@@ -1,0 +1,7 @@
+<form [formGroup]="checkoutForm">
+  <p><label for="url">Url</label><input type="text" id="url" formControlName="url"/></p>
+  <p>
+    <button type="submit" (click)="transform(checkoutForm.value)">Shorten</button>
+  </p>
+</form>
+<h1 *ngIf="shorten.key!=null">{{shorten.url}}{{shorten.key}}</h1>
